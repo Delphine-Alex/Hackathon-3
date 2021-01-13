@@ -1,11 +1,13 @@
-import ProductCard from './components/ProductCard'
+import Shop from './components/Shop/Shop';
+
+
 import './App.css';
 
 const App = () => {
 
   return (
-    <div className="App">
-      <ProductCard />
+    <div className="App">     
+      <Shop />
     </div>
   );
 }

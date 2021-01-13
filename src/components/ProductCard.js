@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import useRequest from '../customHooks/useRequest'
 import './ProductCard.css'
 
+
 const ProductCard = () => {
   const [productIndex, setProductIndex] = useState(0)
   const { data } = useRequest('get', '/produits')
