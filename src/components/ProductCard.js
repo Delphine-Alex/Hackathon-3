@@ -3,6 +3,7 @@ import React, { useState } from 'react'
 import useRequest from '../customHooks/useRequest'
 import './ProductCard.css'
 
+
 const ProductCard = () => {
   const [productIndex, setProductIndex] = useState(0)
   const { data } = useRequest('get', '/produits')
@@ -16,13 +17,12 @@ const ProductCard = () => {
     }
   }
 
-
-
+const ProductCard = ({state}) => {
   return (
     <div className='product-card-wrapper'>
       <div className='product-card-container'>
-        <h1 className='product-card-item product-card-title'>{data[productIndex] && data[productIndex].name}</h1>
-        <h2 className='product-card-item product-card-price'>{data[productIndex] && data[productIndex].price}</h2>
+        <h1 className='product-card-item product-card-title'>{state.name}</h1>
+        <h2 className='product-card-item product-card-price'>{state.price}</h2>
         <input
           className='product-card-item product-card-button'
           type='button'
@@ -31,6 +31,7 @@ const ProductCard = () => {
         <input type="button" value="previous" onClick={changeProduct} />
         <input type="button" value="next" onClick={changeProduct} />
       </div>
+      <img src={'/' + state.photo} alt={state.name} />
     </div>
   )
 }

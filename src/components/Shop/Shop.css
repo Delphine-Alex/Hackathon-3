@@ -1,0 +1,24 @@
+.upside, .downside {
+    height: 50vh;
+    width: 100%;
+}
+
+.upside {
+    background: linear-gradient(-45deg, #23A6D5, #23D5AB);
+}
+
+.downside {
+  background: gray url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  height: 50vh;
+  padding-top: 120px;
+  box-sizing: border-box;
+  animation: slide 20s linear infinite;
+}
+
+@keyframes slide {
+    from { background-position: 0 0; }
+    to { background-position: 0 -400px; }
+}
