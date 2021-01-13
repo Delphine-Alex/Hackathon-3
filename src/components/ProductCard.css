@@ -1,0 +1,35 @@
+.product-card-wrapper {
+  width: 15vw;
+  height: 30vw;
+  margin:10px;
+}
+
+.product-card-container {
+  display: flex;
+  flex-direction: column;
+}
+
+.product-card-item {
+  padding-bottom: 1em;
+}
+
+.product-card-title {
+  line-height: 28px;
+  text-transform: uppercase;
+}
+
+.product-card-button {
+  text-transform: uppercase;
+  border: 1px solid black;
+  width: 10em;
+  padding: 1em;
+  background: transparent;
+  transition: 0.2s;
+  cursor: pointer;
+}
+
+.product-card-button:hover {
+  border: 3px solid black;
+  margin-top: -2px;
+  margin-bottom: -2px;
+}

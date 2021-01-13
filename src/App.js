@@ -1,11 +1,14 @@
 import Shop from './components/Shop/Shop';
+import Product from './components/Product'
 
 import './App.css';
 
-function App() {
+const App = () => {
+
   return (
     <div className="App">
       <Shop />
+      <Product />
     </div>
   );
 }
