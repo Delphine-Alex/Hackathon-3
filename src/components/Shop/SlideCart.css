@@ -1,0 +1,86 @@
+.slide-cart-container {
+  min-height: 100%;
+  min-width: 22%;
+  background: white;
+  opacity: 80%;
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.slide-cart-wrapper {
+  margin: 3em;
+  display: flex;
+  flex-direction: column;
+  padding-top: 3em;
+}
+
+.cart-elems {
+  padding-top: 2em;
+  border-bottom: 0.5px solid lightgrey;
+  padding-bottom: 1em;
+}
+
+.dark-body {
+  min-height: 100%;
+  min-width: 78%;
+  background: black;
+  opacity: 80%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  transition: 0.3s ease-in;
+}
+
+.dark-body{
+  animation: fadeIn ease 0.3s;
+  -webkit-animation: fadeIn ease 0.3s;
+  -moz-animation: fadeIn ease 0.3s;
+  -o-animation: fadeIn ease 0.3s;
+  -ms-animation: fadeIn ease 0.3s;
+  }
+  
+  @keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+  }
+  
+  @-moz-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+  }
+  
+  @-o-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+  }
+  
+  @-ms-keyframes fadeIn {
+  0% {opacity:0;}
+  100% {opacity:0.8;}
+  }
+
+
+
+.cart-button-close {
+  position: absolute;
+  cursor: pointer;
+  font-size: 1.5em;
+  transition: 0.3s;
+  top: 1vw;
+  right: 1vw;
+}
+
+.cart-button-close:hover {
+  transform: scale(1.3);
+}
+
+
+
+
+
