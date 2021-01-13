@@ -6,9 +6,7 @@ const Shop = () => {
     return (
         <div className="row">
             <div className="col">
-                <div className="upside">
                     <ProductCard />
-                </div>
             </div>
             <div className="col">
                 <div className="downside"></div>

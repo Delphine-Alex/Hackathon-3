@@ -3,12 +3,8 @@
     width: 100%;
 }
 
-.upside {
-    background: linear-gradient(-45deg, #23A6D5, #23D5AB);
-}
-
 .downside {
-  background: gray url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
+  background: white url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
   width: 100%;
   margin: 0;
   text-align: center;
