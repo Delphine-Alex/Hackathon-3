@@ -1,0 +1,81 @@
+* {
+    margin: 0;
+    padding: 0;
+    background-color: #9B5817;
+}
+
+.top-navigation {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-top: 5em;
+    color: white;
+    position: absolute;
+    min-width: 100%;
+    text-align: right;
+}
+
+.menu-navigation {
+    list-style-type: none;
+    display: flex;
+    flex-direction: row;
+    text-align: right;
+    float: inline-end;
+    justify-content: flex-end;
+}
+
+.left-menu {
+    float : left;
+    width: 70%;
+}
+
+.right-menu {
+    float: right;
+    width: 30%;
+}
+
+.titre-site {
+    transform: rotate(270deg);
+    width: 11%;
+    text-align : right;
+}
+
+.nav-element {
+    top: 0;
+    height: ;
+}
+
+.nav-element-1 {
+    transform: rotate(270deg);
+    font-size: 2em;
+    /* margin-right: -107px;
+    margin-top: 0px; */
+    text-decoration: underline;
+}
+
+.nav-element-2 {
+    transform: rotate(270deg);
+    font-size: 2em;
+    /* margin-right: -79px;
+    margin-top: -3px; */
+    text-decoration: underline;
+}
+
+.nav-element-3 {
+    transform: rotate(270deg);
+    font-size: 2em;
+    /* margin-right: -80px; */
+    text-align: right;
+    /* margin-top: -31px; */
+    text-decoration: underline;
+}
+
+.nav-element-4 {
+    transform: rotate(270deg);
+    font-size: 2em;
+    /* margin-right: 40px;
+    text-align: right;
+    margin-top: -49px;
+    margin-left: 79px; */
+    text-decoration: underline;
+}
