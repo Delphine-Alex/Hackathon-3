@@ -12,7 +12,8 @@ const directionInit = {
 const ProductCard = () => {
   const [productIndex, setProductIndex] = useState(0);
   const [direction, setDirection] = useState(directionInit);
-  const { data } = useRequest("get", "/categories/snacks");
+  const [mainDirection, setMainDirection] = useState("down");
+  const { data } = useRequest("get", "/categories/drinks");
 
   const changeProduct = (e) => {
     if (e.target.value === "next") {
@@ -27,7 +28,6 @@ const ProductCard = () => {
   };
 
   const changeIndex = () => {
-    console.log(direction);
     if (direction.down) {
       setProductIndex(productIndex + 1);
     } else if (direction.up) {
@@ -41,10 +41,12 @@ const ProductCard = () => {
       if (e.deltaY > 0) {
         if (productIndex < data.length - 1) {
           setDirection({ ...direction, down: true, center: true });
+          setMainDirection("down");
         }
       } else {
         if (productIndex > 0) {
           setDirection({ ...direction, up: true, center: true });
+          setMainDirection("up");
         }
       }
     };
@@ -54,7 +56,7 @@ const ProductCard = () => {
     return () => {
       window.removeEventListener("wheel", wheelScroll);
     };
-  }, [productIndex, data.length]);
+  }, [productIndex, data.length, direction]);
 
   return (
     <div className="product-card-wrapper">
@@ -86,7 +88,7 @@ const ProductCard = () => {
           className="main-image"
           style={
             direction.center
-              ? { animation: "0.4s ease-in-out up" }
+              ? { animation: `0.4s ease-in-out ${mainDirection}` }
               : { animation: "inherit" }
           }
           onAnimationEnd={changeIndex}
