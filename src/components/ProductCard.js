@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 
 import useRequest from '../customHooks/useRequest'
 import './ProductCard.css'
@@ -10,11 +10,35 @@ const ProductCard = () => {
 
   const changeProduct = (e) => {
     if (e.target.value === "next") {
-      setProductIndex(productIndex + 1)
+      if (productIndex < data.length) {
+        setProductIndex(productIndex + 1)
+      }
     } else {
-      setProductIndex(productIndex - 1)
+      if (productIndex > 0) {
+        setProductIndex(productIndex - 1)
+      }
     }
   }
+
+  useEffect(() => {
+    const wheelScroll = (e) => {
+      if (e.deltaY > 0) {
+        if (productIndex < data.length - 1) {
+          setProductIndex(productIndex + 1)
+        }
+      } else {
+        if (productIndex > 0) {
+          setProductIndex(productIndex - 1)
+        }
+      }
+    }
+    window.addEventListener('wheel', wheelScroll)
+    return () => {
+      window.removeEventListener('wheel', wheelScroll)
+    }
+
+  }, [productIndex, data.length])
+
 
 
 
@@ -28,6 +52,7 @@ const ProductCard = () => {
           type='button'
           value='Add to box'
         />
+        <img src={data[productIndex] && data[productIndex].photo} alt={data[productIndex] && data[productIndex].name} className="main-image" />
         <input type="button" value="previous" onClick={changeProduct} />
         <input type="button" value="next" onClick={changeProduct} />
       </div>
