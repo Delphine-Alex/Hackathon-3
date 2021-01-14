@@ -54,6 +54,10 @@
   transform: translate(-50%, 1000px);
 }
 
+.test {
+  
+}
+
 @keyframes up {
   0% {
     transform: translate(-50%, 0px);

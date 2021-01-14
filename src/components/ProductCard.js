@@ -59,52 +59,60 @@ const ProductCard = () => {
   }, [productIndex, data.length, direction]);
 
   return (
-    <div className="product-card-wrapper">
-      <div className="product-card-container">
-        <h1 className="product-card-item product-card-title">
-          {data[productIndex] && data[productIndex].name}
-        </h1>
-        <h2 className="product-card-item product-card-price">
-          {data[productIndex] && data[productIndex].price}
-        </h2>
-        <input
-          className="product-card-item product-card-button"
-          type="button"
-          value="Add to box"
-        />
-        <img
-          src={data[productIndex - 1] && data[productIndex - 1].photo}
-          alt={data[productIndex - 1] && data[productIndex - 1].name}
-          className="previous-image"
-          style={
-            direction.up
-              ? { animation: "0.4s ease-in-out downnext" }
-              : { animation: "inherit" }
-          }
-        />
-        <img
-          src={data[productIndex] && data[productIndex].photo}
-          alt={data[productIndex] && data[productIndex].name}
-          className="main-image"
-          style={
-            direction.center
-              ? { animation: `0.4s ease-in-out ${mainDirection}` }
-              : { animation: "inherit" }
-          }
-          onAnimationEnd={changeIndex}
-        />
-        <img
-          src={data[productIndex + 1] && data[productIndex + 1].photo}
-          alt={data[productIndex + 1] && data[productIndex + 1].name}
-          className="next-image"
-          style={
-            direction.down
-              ? { animation: "0.4s ease-in-out upnext" }
-              : { animation: "inherit" }
-          }
-        />
-        <input type="button" value="previous" onClick={changeProduct} />
-        <input type="button" value="next" onClick={changeProduct} />
+    <div
+      className="upside"
+      style={{
+        background: `${data[productIndex] && data[productIndex].gradient}`,
+      }}
+    >
+      <div className="test"></div>
+      <div className="product-card-wrapper">
+        <div className="product-card-container">
+          <h1 className="product-card-item product-card-title">
+            {data[productIndex] && data[productIndex].name}
+          </h1>
+          <h2 className="product-card-item product-card-price">
+            {data[productIndex] && data[productIndex].price}
+          </h2>
+          <input
+            className="product-card-item product-card-button"
+            type="button"
+            value="Add to box"
+          />
+          <img
+            src={data[productIndex - 1] && data[productIndex - 1].photo}
+            alt={data[productIndex - 1] && data[productIndex - 1].name}
+            className="previous-image"
+            style={
+              direction.up
+                ? { animation: "0.4s linear downnext" }
+                : { animation: "inherit" }
+            }
+          />
+          <img
+            src={data[productIndex] && data[productIndex].photo}
+            alt={data[productIndex] && data[productIndex].name}
+            className="main-image"
+            style={
+              direction.center
+                ? { animation: `0.4s linear ${mainDirection}` }
+                : { animation: "inherit" }
+            }
+            onAnimationEnd={changeIndex}
+          />
+          <img
+            src={data[productIndex + 1] && data[productIndex + 1].photo}
+            alt={data[productIndex + 1] && data[productIndex + 1].name}
+            className="next-image"
+            style={
+              direction.down
+                ? { animation: "0.4s linear upnext" }
+                : { animation: "inherit" }
+            }
+          />
+          <input type="button" value="previous" onClick={changeProduct} />
+          <input type="button" value="next" onClick={changeProduct} />
+        </div>
       </div>
     </div>
   );
