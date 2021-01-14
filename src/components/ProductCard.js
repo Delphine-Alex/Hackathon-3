@@ -74,7 +74,7 @@ const ProductCard = () => {
             {data[productIndex] && data[productIndex].name}
           </h1>
           <h2 className="product-card-item product-card-price">
-            {data[productIndex] && data[productIndex].price}
+            {data[productIndex] && data[productIndex].price} €
           </h2>
           <AddToBox item={data[productIndex]} />
           <img
