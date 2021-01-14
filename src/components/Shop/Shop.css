@@ -4,15 +4,13 @@
 }
 
 .downside {
-  background: white url("https://cdn.discordapp.com/attachments/700666807060660237/799213796308680714/FeuilleThe.png") repeat 0 0;
   width: 100%;
   margin: 0;
   text-align: center;
   height: 50vh;
   padding-top: 120px;
-  box-sizing: border-box;
+  box-sizing: border-box; 
   animation: slide 50s linear infinite;
-  
 }
 
 .upside{
