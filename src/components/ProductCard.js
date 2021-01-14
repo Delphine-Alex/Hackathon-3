@@ -5,6 +5,7 @@ import AddToBox from "./AddToBox";
 import ProductQuantity from "./ProductQuantity";
 import useRequest from "../customHooks/useRequest";
 import SlideCart from "./Shop/SlideCart";
+import Nav from './Nav'
 
 import "./ProductCard.css";
 import "./Shop/Shop.css";
@@ -63,31 +64,34 @@ const ProductCard = () => {
   return (
     <div>
       <div>
+
         <div
           className="upside"
           style={{
             background: `${data[productIndex] && data[productIndex].gradient}`,
           }}
         >
-          <div className="test"></div>
-          <div className="product-card-wrapper">
-            <div className="product-card-container">
+          <h1>Ichi Ni San</h1>
 
-              <ProductInfos data={data} productIndex={productIndex} />
-
-              <AddToBox item={data[productIndex]} />
-
-              <ImageCenter
-                data={data}
-                productIndex={productIndex}
-                direction={direction}
-                changeIndex={changeIndex}
-                mainDirection={mainDirection}
-              />     
-
-            </div>
-          </div>
+        <div className='product-card-container'>
+          <ProductInfos data={data} productIndex={productIndex} />
+          <AddToBox item={data[productIndex]} />
         </div>
+
+          <ImageCenter
+            data={data}
+            productIndex={productIndex}
+            direction={direction}
+            changeIndex={changeIndex}
+            mainDirection={mainDirection}
+          /> 
+
+          <Nav />
+
+
+        </div>
+
+
         <input
           className="cart-button"
           type="button"

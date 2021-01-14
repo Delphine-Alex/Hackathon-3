@@ -125,3 +125,31 @@ p {
     transform: translate(-50%, 0px);
   }
 }
+
+.upside, .downside {
+  height: 50vh;
+  width: 100%;
+}
+
+.downside {
+width: 100%;
+margin: 0;
+text-align: center;
+height: 50vh;
+padding-top: 120px;
+box-sizing: border-box; 
+animation: slide 50s linear infinite;
+}
+
+.upside {
+  display: flex;
+}
+
+.upside{
+transition: 0.4s;
+}
+
+@keyframes slide {
+from { background-position: 0 0; }
+to { background-position: 0 -400px; }
+}
