@@ -25,7 +25,6 @@ function NavArticle() {
 
     return (
         <div className="nav-article">
-            <h1>salope</h1>
             <input className="left-article" type="button" value="previous" onClick={changeProduct} />
             <input className="right-button" type="button" value="next" onClick={changeProduct} />
         </div>
