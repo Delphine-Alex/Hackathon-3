@@ -29,7 +29,7 @@ const useRequest = (method, url, option) => {
       isSubscribe = false;
     };
   }, [url, method, option]);
-  console.log(data);
+
   return { data, error };
 };
 

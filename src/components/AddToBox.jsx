@@ -44,7 +44,7 @@ const AddToBox = ({ item }) => {
       } catch (err) {}
     };
     fetchItemQuantity();
-  }, [item]);
+  }, [item,refetcher]);
 
   return (
     <div>
