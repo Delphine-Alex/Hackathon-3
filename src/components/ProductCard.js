@@ -54,7 +54,7 @@ const ProductCard = () => {
     return () => {
       window.removeEventListener("wheel", wheelScroll);
     };
-  }, [productIndex, data.length]);
+  }, [direction, productIndex, data.length]);
 
   return (
     <div className="product-card-wrapper">

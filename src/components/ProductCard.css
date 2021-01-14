@@ -6,8 +6,8 @@
 .product-card-container {
   display: flex;
   flex-direction: column;
-  padding-top: 2vw;
-  padding-left: 4vw ;
+  padding-top: 4vw;
+  padding-left: 6vw ;
 }
 
 .product-card-item {
