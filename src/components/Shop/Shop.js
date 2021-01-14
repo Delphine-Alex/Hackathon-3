@@ -15,11 +15,8 @@ const Shop = () => {
         <div className='row'>
             <div className="col">
                     <ProductCard />
-
                     <input className='cart-button' type='button' onClick={handleState} value='Your Box' />
                     { state && <SlideCart handleState={handleState} /> }
-                </div>
-
             </div>
             <div className="col">
                 <div className="downside"></div>
