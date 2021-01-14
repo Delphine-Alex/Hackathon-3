@@ -2,10 +2,9 @@ import React, { useEffect, useState } from "react";
 
 import AddToBox from "./AddToBox";
 
-import ProductQuantity from "./ProductQuantity";
 import useRequest from "../customHooks/useRequest";
 import SlideCart from "./Shop/SlideCart";
-import Nav from './Nav'
+import Nav from "./Nav";
 
 import "./ProductCard.css";
 import "./Shop/Shop.css";
@@ -18,17 +17,16 @@ const directionInit = {
   center: false,
 };
 
-const ProductCard = () => {
+const ProductCard = ({ match }) => {
   const [productIndex, setProductIndex] = useState(0);
   const [direction, setDirection] = useState(directionInit);
   const [mainDirection, setMainDirection] = useState("down");
-  const { data } = useRequest("get", "/categories/drinks");
+  const { data } = useRequest("get", `/categories/${match.params.name}`);
 
   const [state, setState] = useState(false);
   const handleState = () => {
     setState(!state);
   };
-
 
   const changeIndex = () => {
     if (direction.down) {
@@ -64,7 +62,6 @@ const ProductCard = () => {
   return (
     <div>
       <div>
-
         <div
           className="upside"
           style={{
@@ -88,24 +85,14 @@ const ProductCard = () => {
             direction={direction}
             changeIndex={changeIndex}
             mainDirection={mainDirection}
-          /> 
-        <Nav />
+          />
+
+          <Nav handleState={handleState} />
         </div>
 
-
-        <input
-          className="cart-button"
-          type="button"
-          onClick={handleState}
-          value="Your Box"
-        />
-
-        <ProductQuantity />        
         {state && <SlideCart handleState={handleState} />}
-
       </div>
       <div>
-
         <div
           className="downside"
           style={{
@@ -114,7 +101,6 @@ const ProductCard = () => {
             }")`,
           }}
         ></div>
-
       </div>
     </div>
   );
