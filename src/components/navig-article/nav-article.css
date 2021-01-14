@@ -1,0 +1,24 @@
+.nav-article {
+    background: palevioletred;
+    position: fixed;
+    display: flex;
+
+}
+
+.left-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+.right-button {
+    position: fixed;
+    width: 50px;
+    height: 50px;
+    background-color: red;
+}
+
+h1 {
+    margin-top: 500px;
+}
