@@ -49,10 +49,10 @@ const AddToBox = ({ item }) => {
   return (
     <div>
       {buying ? (
-        <div className="product-card-item product-card-button">
-          <input type="button" value="-" onClick={removeOne} />
+        <div className="product-card-change-adding">
+          <p onClick={removeOne}>-</p>
           <p>{itemInfo.quantity}</p>
-          <input type="button" value="+" onClick={addOne} />
+          <p onClick={addOne}>+</p>
         </div>
       ) : (
         <input
