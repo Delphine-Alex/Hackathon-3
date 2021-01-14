@@ -1,3 +1,7 @@
+@import url('https://fonts.googleapis.com/css2?family=Didact+Gothic&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bodoni+Moda:wght@400;500&display=swap');
+
+
 .top-container {
     min-width: 100%;
     display: flex;
@@ -5,16 +9,47 @@
     position: fixed;
     color: white;
     cursor: pointer;
+    margin-top: 2vw;
+    margin-left: 3vw;
+    
+}
+
+.top-container-title {
+    writing-mode: tb-rl;
+    transform:rotate(-180deg);
+    font-size: 1em;
+    font-family: 'Bodoni Moda', serif;
+    font-weight: 400;
 }
 
 .top-container-categories {
-    padding-left: 60vw;
+    position: absolute;
+    right: 0;
+    margin-right: 10vw;
+    writing-mode: tb-rl;
+    transform:rotate(-180deg);
+    font-family: 'Didact Gothic', sans-serif;
+    text-transform: uppercase;
+    font-size: 1.5em;
+    text-align-last: end;
 }
 
 .top-container-categories li {
-    -webkit-transform-origin: left top;
+    text-decoration: underline;
+}
+
+.top-container-categories li:hover {
+    margin-top: 5vw;
+}
+
+.cart-button {
+    margin-right: 3em;
+}
+
+/* .top-container-categories li {
     -webkit-transform:rotate(-90deg) translateX(-100%);
-  }
+    min-width: 2em;
+  } */
   /* ul.nav li {    
     margin-right:20px;
     float:right;

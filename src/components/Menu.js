@@ -1,17 +1,26 @@
-import React from 'react';
+import React, {useState} from 'react';
+import SlideCart from './Shop/SlideCart'
 import './Menu.css'
 
 function Menu () {
+    const [state, setState] = useState(false);
+
+    const handleState = () => {
+        setState(!state)
+    }
     return (
        <div className='nav-container'>
             <nav className="top-container">
-                <div className="top-container-gauche">
-                    <h2 className="titre-permanent">Hichi Ni San</h2>
+                <div className="top-container-title">
+                    <h2 className="titre-permanent">Hichi ni San</h2>
                 </div>
                 <ul className='top-container-categories'>
-                    <li>Candy</li>
-                    <li>Drink</li>
+                    <li>Drinks</li>
+                    <li>Sweets</li>
                     <li>Snacks</li>
+                    <li className='cart-button' type='button' onClick={handleState}>Your Box
+                        { state && <SlideCart handleState={handleState} /> }
+                    </li>
                 </ul>
                 <div className="container-droite">
 
