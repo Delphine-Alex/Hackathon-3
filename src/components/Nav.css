@@ -1,0 +1,16 @@
+.top-container-categories {
+  transform: rotate(-90deg);
+  text-align: right;
+  color: white;
+  position: absolute;
+  right: 0;
+  margin-right: 10%;
+  font-size: 1.5em;
+  text-transform: uppercase;
+  font-weight: bolder;
+  letter-spacing: 5px;
+  line-height: 1.5em;
+}
+
+li:hover {
+}

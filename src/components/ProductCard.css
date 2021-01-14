@@ -1,9 +1,30 @@
+.upside {
+  display: flex;
+  justify-content:start;
+  transition: 0.4s;
+  padding-top: 3vw;
+}
+
+.title {
+  transform: rotate(-90deg);
+  display: flex;
+  height: fit-content;
+  padding-top: 7vw;
+  padding-right: 1em ;
+  color: white;
+  text-transform: uppercase;
+}
+
+
+
+
 .product-card-container {
   display: flex;
   flex-direction: column;
-  padding-top: 4vw;
-  padding-left: 6vw;
+  padding-top: 0.2vw;
 }
+
+
 
 .product-card-item {
   padding-bottom: 1em;
@@ -19,8 +40,10 @@
 .product-card-description {
   color: white;
   font-size: 16px;
-  width: 60vh;
+  width: 25vh;
+  height: 9vw;
   text-align: justify;
+
 }
 
 .product-card-price {
@@ -141,15 +164,8 @@ box-sizing: border-box;
 animation: slide 50s linear infinite;
 }
 
-.upside {
-  display: flex;
-}
-
-.upside{
-transition: 0.4s;
-}
 
 @keyframes slide {
-from { background-position: 0 0; }
-to { background-position: 0 -400px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 -400px; }
 }

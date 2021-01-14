@@ -71,12 +71,16 @@ const ProductCard = () => {
             background: `${data[productIndex] && data[productIndex].gradient}`,
           }}
         >
-          <h1>Ichi Ni San</h1>
 
-        <div className='product-card-container'>
-          <ProductInfos data={data} productIndex={productIndex} />
-          <AddToBox item={data[productIndex]} />
-        </div>
+            <h1 className='title'>Ichi Ni San</h1>
+
+            <div className='product-card-container'>
+              <ProductInfos data={data} productIndex={productIndex} />
+              <AddToBox item={data[productIndex]} />
+            </div>
+
+
+
 
           <ImageCenter
             data={data}
@@ -85,10 +89,7 @@ const ProductCard = () => {
             changeIndex={changeIndex}
             mainDirection={mainDirection}
           /> 
-
-          <Nav />
-
-
+        <Nav />
         </div>
 
 
