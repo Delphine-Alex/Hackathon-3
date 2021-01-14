@@ -1,7 +1,6 @@
-import Shop from "./components/Shop/Shop";
-
 import "./App.css";
 import { createContext, useState } from "react";
+import ProductCard from "./components/ProductCard";
 
 export const RefetcherContext = createContext([]);
 
@@ -11,7 +10,7 @@ const App = () => {
   return (
     <div className="App">
       <RefetcherContext.Provider value={[refetcher, setRefetcher]}>
-        <Shop />
+        <ProductCard />
       </RefetcherContext.Provider>
     </div>
   );
