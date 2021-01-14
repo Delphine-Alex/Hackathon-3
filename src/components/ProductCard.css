@@ -59,9 +59,22 @@
   transform: translate(-50%, 1000px);
 }
 
+.test {
+  
+}
+
 @keyframes up {
   0% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0px);
+  }
+  100% {
+    transform: translate(-50%, -1000px);
+  }
+}
+
+@keyframes down {
+  0% {
+    transform: translate(-50%, 0px);
   }
   100% {
     transform: translate(-50%, 1000px);
@@ -73,7 +86,7 @@
     transform: translate(-50%, -1000px);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0px);
   }
 }
 
@@ -82,6 +95,6 @@
     transform: translate(-50%, 1000px);
   }
   100% {
-    transform: translate(-50%, 0);
+    transform: translate(-50%, 0px);
   }
 }
