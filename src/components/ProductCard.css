@@ -6,20 +6,25 @@
 .product-card-container {
   display: flex;
   flex-direction: column;
+  padding-top: 4vw;
+  padding-left: 6vw ;
 }
 
 .product-card-item {
   padding-bottom: 1em;
+  color: white;
 }
 
 .product-card-title {
+  color: white;
   line-height: 28px;
   text-transform: uppercase;
 }
 
 .product-card-button {
+  color: white;
   text-transform: uppercase;
-  border: 1px solid black;
+  border: 1px solid white;
   width: 10em;
   padding: 1em;
   background: transparent;
@@ -28,7 +33,7 @@
 }
 
 .product-card-button:hover {
-  border: 3px solid black;
+  border: 3px solid white;
   margin-top: -2px;
   margin-bottom: -2px;
 }
