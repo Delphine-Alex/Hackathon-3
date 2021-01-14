@@ -4,17 +4,22 @@
 }
 
 .downside {
-  background: white url(https://subtlepatterns.com/patterns/geometry2.png) repeat 0 0;
+  background: white url("https://as2.ftcdn.net/jpg/03/10/05/67/500_F_310056794_qLu4lQhVTxARW45iJJg2Wy2pMYlkMfJ3.jpg") repeat 0 0;
   width: 100%;
   margin: 0;
   text-align: center;
   height: 50vh;
   padding-top: 120px;
   box-sizing: border-box;
-  animation: slide 20s linear infinite;
+  animation: slide 50s linear infinite;
+  
+}
+
+.upside{
+  transition: 0.4s;
 }
 
 @keyframes slide {
-    from { background-position: 0 0; }
-    to { background-position: 0 -400px; }
+  from { background-position: 0 0; }
+  to { background-position: 0 -400px; }
 }
