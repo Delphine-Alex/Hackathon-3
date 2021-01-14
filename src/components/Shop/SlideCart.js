@@ -12,12 +12,13 @@ const SlideCart = ({ handleState }) => {
       </div>
       <div className='slide-cart-container'>
         <div className='slide-cart-wrapper'>
-          <h1 className='cart-elems cart-title'>YOUR BOX</h1>
+          <h1 className='cart'>CART</h1>
+          <h2 className='cart-elems cart-title'>YOUR BOX</h2>
           <Panier facture={[total, setTotal]} />
           <h3 className='cart-elems'>TOTAL</h3>
           <p>{total} €</p>
           <h3 className='cart-elems'>PAY</h3>
-          <input type="button" value="click here" />
+          <input type="button" value="Click here" />
         </div>
       </div>
     </div>
