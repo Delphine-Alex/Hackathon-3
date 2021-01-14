@@ -1,9 +1,11 @@
 import axios from "axios";
-import { useEffect, useState } from "react";
+import { useContext, useEffect, useState } from "react";
+import { RefetcherContext } from "../App";
 
 const AddToBox = ({ item }) => {
   const [buying, setBuying] = useState(false);
   const [itemInfo, setItemInfo] = useState({});
+  const [refetcher, setRefetcher] = useContext(RefetcherContext);
 
   const addOne = async () => {
     try {
@@ -13,16 +15,18 @@ const AddToBox = ({ item }) => {
       });
       setBuying(true);
       setItemInfo(data);
+      setRefetcher(!refetcher);
     } catch (err) {}
   };
 
   const removeOne = async () => {
     try {
-      const { data } = await axios.delete("/paniers/button/" + item.id);     
+      const { data } = await axios.delete("/paniers/button/" + item.id);
       if (data === 209) {
         setBuying(false);
       }
       setItemInfo(data);
+      setRefetcher(!refetcher);
     } catch (err) {}
   };
 

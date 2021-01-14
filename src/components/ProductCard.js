@@ -16,17 +16,17 @@ const ProductCard = () => {
   const [mainDirection, setMainDirection] = useState("down");
   const { data } = useRequest("get", "/categories/drinks");
 
-  const changeProduct = (e) => {
-    if (e.target.value === "next") {
-      if (productIndex < data.length - 1) {
-        setProductIndex(productIndex + 1);
-      }
-    } else {
-      if (productIndex > 0) {
-        setProductIndex(productIndex - 1);
-      }
-    }
-  };
+  // const changeProduct = (e) => {
+  //   if (e.target.value === "next") {
+  //     if (productIndex < data.length - 1) {
+  //       setProductIndex(productIndex + 1);
+  //     }
+  //   } else {
+  //     if (productIndex > 0) {
+  //       setProductIndex(productIndex - 1);
+  //     }
+  //   }
+  // };
 
   const changeIndex = () => {
     if (direction.down) {
