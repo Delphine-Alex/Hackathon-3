@@ -54,7 +54,7 @@ const ProductCard = () => {
     return () => {
       window.removeEventListener("wheel", wheelScroll);
     };
-  }, [productIndex, data.length]);
+  }, [direction, productIndex, data.length]);
 
   return (
     <div className="product-card-wrapper">
@@ -101,8 +101,10 @@ const ProductCard = () => {
               : { animation: "inherit" }
           }
         />
-        <input type="button" value="previous" onClick={changeProduct} />
-        <input type="button" value="next" onClick={changeProduct} />
+        <div>
+        <input className="bottom-button" type="button" value="previous" onClick={changeProduct} />
+        <input className="bottom-button" type="button" value="next" onClick={changeProduct} />
+        </div>
       </div>
     </div>
   );

@@ -1,0 +1,22 @@
+.top-conteneur {
+    min-width: 100%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    position: fixed;
+}
+
+.top-conteneur-gauche {
+    width: 65%;
+    writing-mode: vertical-lr;
+}
+
+.top-conteneur-centre {
+    width: 25%;
+    writing-mode: vertical-lr;
+}
+
+.top-conteneur-droite {
+    width: 10%;
+    writing-mode: vertical-lr;
+}
