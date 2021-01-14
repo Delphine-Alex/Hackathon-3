@@ -1,17 +1,20 @@
-import Shop from './components/Shop/Shop';
-import Menu from './components/Menu'
+import Shop from "./components/Shop/Shop";
 
+import "./App.css";
+import { createContext, useState } from "react";
 
-import './App.css';
+export const RefetcherContext = createContext([]);
 
 const App = () => {
+  const [refetcher, setRefetcher] = useState(false);
 
   return (
-    <div className="App">     
-      <Menu />
-      <Shop />
+    <div className="App">
+      <RefetcherContext.Provider value={[refetcher, setRefetcher]}>
+        <Shop />
+      </RefetcherContext.Provider>
     </div>
   );
-}
+};
 
 export default App;

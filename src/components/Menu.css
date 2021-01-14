@@ -5,42 +5,33 @@
 .top-container {
     min-width: 100%;
     display: flex;
-    justify-content: space-between;
-    position: fixed;
     color: white;
     cursor: pointer;
-    margin-top: 2vw;
-    margin-left: 3vw;
     
 }
 
 .top-container-title {
-    writing-mode: tb-rl;
-    transform:rotate(-180deg);
+    /* writing-mode: tb-rl;
+    transform:rotate(-180deg); */
     font-size: 1em;
     font-family: 'Bodoni Moda', serif;
     font-weight: 400;
 }
 
 .top-container-categories {
-    position: absolute;
-    right: 0;
-    margin-right: 10vw;
-    writing-mode: tb-rl;
-    transform:rotate(-180deg);
+    /* writing-mode: tb-rl;
+    transform:rotate(-180deg); */
     font-family: 'Didact Gothic', sans-serif;
     text-transform: uppercase;
     font-size: 1.5em;
-    text-align-last: end;
+    /* text-align-last: end; */
 }
 
 .top-container-categories li {
     text-decoration: underline;
 }
 
-.top-container-categories li:hover {
-    margin-top: 5vw;
-}
+
 
 .cart-button {
     margin-right: 3em;
