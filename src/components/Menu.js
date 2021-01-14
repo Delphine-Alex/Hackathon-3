@@ -14,7 +14,6 @@ const Menu = (props) => {
                     <li>Drinks</li>
                     <li>Sweets</li>
                     <li>Snacks</li>
-                    <li className='cart-button' type='button' onClick={handleState}>Your Box</li>
                 </ul>
             </nav>
         // </div>          
