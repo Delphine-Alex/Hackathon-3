@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 
 import useRequest from "../customHooks/useRequest";
+import AddToBox from "./AddToBox";
 import "./ProductCard.css";
 
 const directionInit = {
@@ -34,6 +35,7 @@ const ProductCard = () => {
       setProductIndex(productIndex - 1);
     }
     setDirection(directionInit);
+   
   };
 
   useEffect(() => {
@@ -56,7 +58,6 @@ const ProductCard = () => {
     return () => {
       window.removeEventListener("wheel", wheelScroll);
     };
-
   }, [productIndex, data.length, direction]);
 
   return (
@@ -75,11 +76,7 @@ const ProductCard = () => {
           <h2 className="product-card-item product-card-price">
             {data[productIndex] && data[productIndex].price}
           </h2>
-          <input
-            className="product-card-item product-card-button"
-            type="button"
-            value="Add to box"
-          />
+          <AddToBox item={data[productIndex]} />
           <img
             src={data[productIndex - 1] && data[productIndex - 1].photo}
             alt={data[productIndex - 1] && data[productIndex - 1].name}
@@ -111,8 +108,8 @@ const ProductCard = () => {
                 : { animation: "inherit" }
             }
           />
-          <input type="button" value="previous" onClick={changeProduct} />
-          <input type="button" value="next" onClick={changeProduct} />
+          {/* <input type="button" value="previous" onClick={changeProduct} />
+          <input type="button" value="next" onClick={changeProduct} /> */}
         </div>
       </div>
     </div>

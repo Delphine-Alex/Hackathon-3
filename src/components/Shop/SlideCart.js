@@ -1,6 +1,6 @@
 import React from 'react'
 
-import '/Users/jeromenicco/workspace/Hackathon-3/src/components/Shop/SlideCart.css'
+import './SlideCart.css'
 
 const SlideCart = ({handleState}) => {
   return (
