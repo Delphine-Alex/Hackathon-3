@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import Panier from '../Panier/Panier'
 
+
 import './SlideCart.css'
 
 const SlideCart = ({ handleState }) => {
