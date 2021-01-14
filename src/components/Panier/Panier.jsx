@@ -14,7 +14,9 @@ const Panier = ({ facture }) => {
           return price.price * price.quantity;
         })
         .reduce((a, b) => a + b);
-      setTotal(totalPrice);
+      setTotal(totalPrice.toFixed(2));
+    } else {
+      setTotal(0);
     }
   }, [data, setTotal]);
 

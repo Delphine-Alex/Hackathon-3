@@ -17,6 +17,7 @@ const SlideCart = ({ handleState }) => {
           <h3 className='cart-elems'>TOTAL</h3>
           <p>{total} €</p>
           <h3 className='cart-elems'>PAY</h3>
+          <input type="button" value="click here" />
         </div>
       </div>
     </div>
