@@ -5,6 +5,8 @@
   margin-right: 70%;
   font-family: 'Didact Gothic', sans-serif;
   font-weight: 100;
+  max-width: 12em;
+  min-height: auto;
 }
 
 .product-card-item {
