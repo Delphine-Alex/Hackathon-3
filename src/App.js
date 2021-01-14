@@ -1,5 +1,6 @@
 import Shop from './components/Shop/Shop';
 import Menu from './components/Menu'
+import Router from './Router'
 
 
 import './App.css';
@@ -7,7 +8,8 @@ import './App.css';
 const App = () => {
 
   return (
-    <div className="App">     
+    <div className="App">    
+    <Router /> 
       <Menu />
       <Shop />
     </div>
