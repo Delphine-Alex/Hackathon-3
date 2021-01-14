@@ -19,6 +19,10 @@
   padding-top: 3em;
 }
 
+.cart {
+  text-align: center;
+}
+
 .slide-cart-wrapper input {
   background-color: red;
   border: none;
