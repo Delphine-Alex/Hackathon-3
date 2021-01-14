@@ -66,23 +66,16 @@ const ProductCard = ({match, state}) => {
       <div className="top-container-title">
         <h2 className="titre-permanent">Hichi ni San</h2>
       </div>
-
-      <div className="product-card-wrapper">
-
-        <div className="product-card-container">
-          <h1 className="product-card-item product-card-title">{data[productIndex] && data[productIndex].name}</h1>
-          <h2 className="product-card-item product-card-price">{data[productIndex] && data[productIndex].price}</h2>
-            <AddToBox item={data[productIndex]} />
-        </div>
-        
+      <div className="product-card-container">
+        <h1 className="product-card-item product-card-title">{data[productIndex] && data[productIndex].name}</h1>
+        <h2 className="product-card-item product-card-price">{data[productIndex] && data[productIndex].price}</h2>
+          <AddToBox item={data[productIndex]} />
+      </div>
+      <div>
         <Menu state={state} />
-        
-    </div>
-
-
-
-
-
+      </div>
+      
+       
           <img
             src={data[productIndex - 1] && data[productIndex - 1].photo}
             alt={data[productIndex - 1] && data[productIndex - 1].name}
