@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "../ProductCard";
 import SlideCart from "./SlideCart";
+import NavArticle from '../navig-article/nav-article'
 import "./Shop.css";
 import ProductQuantity from "../ProductQuantity";
 
@@ -25,7 +26,10 @@ const Shop = () => {
         {state && <SlideCart handleState={handleState} />}
       </div>
       <div className="col">
-        <div className="downside"></div>
+        <NavArticle />
+        <div className="downside">
+
+        </div>
       </div>
     </div>
   );
