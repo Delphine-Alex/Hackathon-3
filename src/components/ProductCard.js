@@ -8,6 +8,8 @@ import SlideCart from "./Shop/SlideCart";
 
 import "./ProductCard.css";
 import "./Shop/Shop.css";
+import ImageCenter from "./ImageCenter";
+import ProductInfos from "./ProductInfos";
 
 const directionInit = {
   down: false,
@@ -16,28 +18,16 @@ const directionInit = {
 };
 
 const ProductCard = () => {
-  
   const [productIndex, setProductIndex] = useState(0);
   const [direction, setDirection] = useState(directionInit);
   const [mainDirection, setMainDirection] = useState("down");
   const { data } = useRequest("get", "/categories/drinks");
-  
+
   const [state, setState] = useState(false);
   const handleState = () => {
     setState(!state);
   };
 
-  // const changeProduct = (e) => {
-  //   if (e.target.value === "next") {
-  //     if (productIndex < data.length - 1) {
-  //       setProductIndex(productIndex + 1);
-  //     }
-  //   } else {
-  //     if (productIndex > 0) {
-  //       setProductIndex(productIndex - 1);
-  //     }
-  //   }
-  // };
 
   const changeIndex = () => {
     if (direction.down) {
@@ -46,7 +36,6 @@ const ProductCard = () => {
       setProductIndex(productIndex - 1);
     }
     setDirection(directionInit);
-   
   };
 
   useEffect(() => {
@@ -80,73 +69,49 @@ const ProductCard = () => {
             background: `${data[productIndex] && data[productIndex].gradient}`,
           }}
         >
-        <div className="test"></div>
-        <div className="product-card-wrapper">
-          <div className="product-card-container">
-            <h1 className="product-card-item product-card-title">
-              {data[productIndex] && data[productIndex].name}
-            </h1>
-            <h2 className="product-card-item product-card-description">
-              {data[productIndex] && data[productIndex].description}
-            </h2>
-            <h2 className="product-card-item product-card-price">
-              {data[productIndex] && data[productIndex].price} €
-            </h2>
-            <AddToBox item={data[productIndex]} />
-            <img
-              src={data[productIndex - 1] && data[productIndex - 1].photo}
-              alt={data[productIndex - 1] && data[productIndex - 1].name}
-              className="previous-image"
-              style={
-                direction.up
-                  ? { animation: "0.4s linear downnext" }
-                  : { animation: "inherit" }
-              }
-            />
-            <img
-              src={data[productIndex] && data[productIndex].photo}
-              alt={data[productIndex] && data[productIndex].name}
-              className="main-image"
-              style={
-                direction.center
-                  ? { animation: `0.4s linear ${mainDirection}` }
-                  : { animation: "inherit" }
-              }
-              onAnimationEnd={changeIndex}
-            />
-            <img
-              src={data[productIndex + 1] && data[productIndex + 1].photo}
-              alt={data[productIndex + 1] && data[productIndex + 1].name}
-              className="next-image"
-              style={
-                direction.down
-                  ? { animation: "0.4s linear upnext" }
-                  : { animation: "inherit" }
-              }
-            />
-            {/* <input type="button" value="previous" onClick={changeProduct} />
-            <input type="button" value="next" onClick={changeProduct} /> */}
+          <div className="test"></div>
+          <div className="product-card-wrapper">
+            <div className="product-card-container">
+
+              <ProductInfos data={data} productIndex={productIndex} />
+
+              <AddToBox item={data[productIndex]} />
+
+              <ImageCenter
+                data={data}
+                productIndex={productIndex}
+                direction={direction}
+                changeIndex={changeIndex}
+                mainDirection={mainDirection}
+              />     
+
+            </div>
           </div>
         </div>
+        <input
+          className="cart-button"
+          type="button"
+          onClick={handleState}
+          value="Your Box"
+        />
+
+        <ProductQuantity />        
+        {state && <SlideCart handleState={handleState} />}
+
       </div>
-      <input
-      className="cart-button"
-      type="button"
-      onClick={handleState}
-      value="Your Box"
-      />
-    <ProductQuantity />
-    {state && <SlideCart handleState={handleState} />}
-  </div>
-  <div>
-    <div className="downside"
-    style={{
-      background: `url("${data[productIndex] && data[productIndex].background}")`,
-    }}
-    >
+      <div>
+
+        <div
+          className="downside"
+          style={{
+            background: `url("${
+              data[productIndex] && data[productIndex].background
+            }")`,
+          }}
+        ></div>
+
+      </div>
     </div>
-  </div>
-</div>
   );
 };
 
