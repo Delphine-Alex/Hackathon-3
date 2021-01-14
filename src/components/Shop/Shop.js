@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import ProductCard from "../ProductCard";
 import SlideCart from "./SlideCart";
-import NavArticle from '../navig-article/nav-article'
+import NavArticle from '../navig-article/navarticle'
 import "./Shop.css";
 import ProductQuantity from "../ProductQuantity";
 

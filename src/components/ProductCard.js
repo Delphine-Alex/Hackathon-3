@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
-
 import useRequest from "../customHooks/useRequest";
 import AddToBox from "./AddToBox";
+import NavArticle from "./navig-article/navarticle";
 import "./ProductCard.css";
 
 const directionInit = {
@@ -108,8 +108,6 @@ const ProductCard = () => {
                 : { animation: "inherit" }
             }
           />
-          {/* <input type="button" value="previous" onClick={changeProduct} />
-          <input type="button" value="next" onClick={changeProduct} /> */}
         </div>
       </div>
     </div>

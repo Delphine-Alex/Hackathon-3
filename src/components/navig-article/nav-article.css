@@ -8,7 +8,6 @@
     border: none;
     outline: none;
     background-color: transparent;
-    transform: rotate(90deg);
 }
 
 .right-button {
@@ -16,5 +15,4 @@
     border: none;
     outline: none;
     background-color: transparent;
-    transform: rotate(90deg);
 }
