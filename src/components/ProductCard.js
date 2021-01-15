@@ -114,7 +114,7 @@ const ProductCard = ({ match }) => {
           className="downside"
 
           style={{
-            background: `url("${
+            background: `url("/${
               data[productIndex] && data[productIndex].background
             }")`,
           }}
