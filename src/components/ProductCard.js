@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Helmet } from "react-helmet";
 
 import AddToBox from "./AddToBox";
 
@@ -22,6 +23,10 @@ const ProductCard = ({ match }) => {
   const [direction, setDirection] = useState(directionInit);
   const [mainDirection, setMainDirection] = useState("down");
   const { data } = useRequest("get", `/categories/${match.params.name}`);
+  const [seo, setSeo] = useState({
+    categorie: "",
+    product: "",
+  });
 
   const [state, setState] = useState(false);
   const handleState = () => {
@@ -59,27 +64,52 @@ const ProductCard = ({ match }) => {
     };
   }, [productIndex, data.length, direction]);
 
-
+  useEffect(() => {
+    if (match.url) {
+      const cat = match.url.split("/")[1];
+      const prod = match.url.split("/")[2];
+      setSeo({ ...seo, categorie: cat, product: prod });
+    }
+  }, [match]);
 
   return (
-    <div>
+    <main>
+      <Helmet>
+        <title>
+          Ichi Ni San
+          {" " +
+            seo.product +
+            ` ${data[productIndex] && data[productIndex].name}`}
+        </title>
+        <meta
+          name="description"
+          content={`Japanese ${
+            seo.product && seo.product
+          } imported by ichi ni san from japan ! `}
+        />
+        <meta
+          name="keywords"
+          content="japan , product , candies , products , imported , kawai"
+        />
+       <meta name="robots" content="index,follow" />
+       <meta name="author" content="un dos tres"></meta>
+       <meta name="url" content="http://www.ichinisan.com"></meta>
+       <meta name="coverage" content="Worldwide"></meta>
+       <meta name="publisher" content="WCS"></meta>
+      </Helmet>
       <div>
-        <div
+        <section
           className="upside"
           style={{
             background: `${data[productIndex] && data[productIndex].gradient}`,
           }}
         >
+          <h1 className="title">Ichi Ni San</h1>
 
-            <h1 className='title'>Ichi Ni San</h1>
-
-            <div className='product-card-container'>
-              <ProductInfos data={data} productIndex={productIndex} />
-              <AddToBox item={data[productIndex]} />
-            </div>
-
-
-
+          <article className="product-card-container">
+            <ProductInfos data={data} productIndex={productIndex} />
+            <AddToBox item={data[productIndex]} />
+          </article>
 
           <ImageCenter
             data={data}
@@ -90,21 +120,21 @@ const ProductCard = ({ match }) => {
           />
 
           <Nav handleState={handleState} />
-        </div>
+        </section>
 
         {state && <SlideCart handleState={handleState} />}
       </div>
       <div>
-        <div
+        <footer
           className="downside"
           style={{
             background: `url("/${
               data[productIndex] && data[productIndex].background
             }")`,
           }}
-        ></div>
+        ></footer>
       </div>
-    </div>
+    </main>
   );
 };
 
