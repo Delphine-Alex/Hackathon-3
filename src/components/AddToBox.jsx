@@ -2,6 +2,8 @@ import axios from "axios";
 import { useContext, useEffect, useState } from "react";
 import { RefetcherContext } from "../App";
 
+import './AddToBox.css'
+
 const AddToBox = ({ item }) => {
   const [buying, setBuying] = useState(false);
   const [itemInfo, setItemInfo] = useState({});
@@ -50,13 +52,13 @@ const AddToBox = ({ item }) => {
     <div>
       {buying ? (
         <div className="product-card-change-adding">
-          <p onClick={removeOne}>-</p>
+          <p className='shop' onClick={removeOne}>-</p>
           <p>{itemInfo.quantity}</p>
-          <p onClick={addOne}>+</p>
+          <p className='shop' onClick={addOne}>+</p>
         </div>
       ) : (
         <input
-          className="product-card-item product-card-button"
+          className="product-card-button"
           type="button"
           value="Add to box"
           onClick={addOne}

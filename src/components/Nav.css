@@ -8,9 +8,15 @@
   font-size: 1.5em;
   text-transform: uppercase;
   font-weight: bolder;
-  letter-spacing: 5px;
+  letter-spacing: 4px;
   line-height: 1.5em;
 }
 
-li:hover {
+.li-item:hover {
+  color: black;
+}
+
+.nav-active {
+  color: black;
+
 }
