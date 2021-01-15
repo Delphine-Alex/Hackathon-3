@@ -6,7 +6,10 @@
   height: 50px;
   background: transparent;
   cursor: pointer;
+}
 
+.product-card-button:focus {
+  outline: 0;
 }
 
 .product-card-change-adding {
@@ -21,6 +24,9 @@
   justify-content: space-around;
   align-items: center;
   padding-bottom: 0 ;
+}
+.product-card-change-adding:focus {
+  outline: 0;
 }
 
 

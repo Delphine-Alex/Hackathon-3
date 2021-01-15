@@ -28,6 +28,12 @@
   outline: 0;
 }
 
+.next-prev-item:active{
+  outline: 0;
+}
+
+
+
 .left-button {
   transform: rotate(180deg);
 }
@@ -35,6 +41,8 @@
 .my-node-enter {
   opacity: 0;
 }
+
+
 .my-node-enter-active {
   opacity: 1;
   transition: opacity 200ms;
