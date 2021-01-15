@@ -266,10 +266,10 @@
       margin-left: -2.6em;
       margin-top: 2.2em;
       font-size: 1.8em;
+      padding-top: 9vw;
     }
     .product-card-title {
       width: 6em;
-      
     }
 
     .product-card-container {
@@ -368,7 +368,7 @@
   }
 }
 
-@media screen and (max-width: 1500px) {
+/* @media screen and (max-width: 1500px) {
   .title {
     padding-top: 8.8vw;
   }
@@ -396,4 +396,4 @@
   .title {
     padding-top: 15vw;
   }
-}
+} */
