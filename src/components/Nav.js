@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "react-router-dom";
+import { NavLink } from "react-router-dom";
 import ProductQuantity from "./ProductQuantity"
 
 import './Nav.css'
@@ -9,16 +9,16 @@ const nav = ({ handleState }) => {
     <div>
       <nav className="top-container">
         <ul className="top-container-categories">
-          <Link to="/categorie/drinks">
-            <li>Drinks</li>
-          </Link>
-          <Link to="/categorie/candies">
-            <li>Candies</li>
-          </Link>
-          <Link to="/categorie/snacks">
-            <li>Snacks</li>
-          </Link>
-          <li onClick={handleState} style={{ cursor: "pointer" }}>
+          <NavLink activeClassName='nav-active' to="/categorie/drinks">
+            <li className='li-item'>Drinks</li>
+          </NavLink>
+          <NavLink activeClassName='nav-active' to="/categorie/candies">
+            <li className='li-item' >Candies</li>
+          </NavLink>
+          <NavLink activeClassName='nav-active' to="/categorie/snacks">
+            <li className='li-item'>Snacks</li>
+          </NavLink>
+          <li className='li-item' onClick={handleState} style={{ cursor: "pointer" }}>
             Your Box
           </li>
           <ProductQuantity />

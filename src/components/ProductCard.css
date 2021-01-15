@@ -9,10 +9,11 @@
   transform: rotate(-90deg);
   display: flex;
   height: fit-content;
-  padding-top: 7vw;
+  padding-top: 7.8vw;
   padding-right: 1em ;
   color: white;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 
@@ -35,6 +36,7 @@
   color: white;
   font-size: 28px;
   text-transform: uppercase;
+  letter-spacing: 2px;
 }
 
 .product-card-description {
@@ -42,8 +44,9 @@
   font-size: 16px;
   width: 25vh;
   height: 9vw;
-  text-align: justify;
-
+  opacity: 80%;
+  letter-spacing: 0.8px;
+  line-height: 22px;
 }
 
 .product-card-price {
@@ -51,46 +54,6 @@
   font-size: 20px;
 }
 
-.product-card-button {
-  color: white;
-  text-transform: uppercase;
-  border: 1px solid white;
-  width: 134px;
-  height: 50px;
-  background: transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
-
-.product-card-change-adding {
-  color: white;
-  text-transform: uppercase;
-  border: 1px solid white;
-  width: 134px;
-  height: 52px;
-
-  background: transparent;
-  transition: 0.2s;
-  cursor: pointer;
-  display: flex;
-  justify-content: space-around;
-
-  align-items: center;
-}
-
-p {
-  margin: 0;
-  padding: 0;
-}
-
-.product-card-button:hover {
-  border: 3px solid white;
-  margin-top: -2px;
-  margin-bottom: -2px;
-}
 
 .main-image {
   position: absolute;
