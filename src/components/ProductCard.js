@@ -12,6 +12,7 @@ import "./Shop/Shop.css";
 import ImageCenter from "./ImageCenter";
 import ProductInfos from "./ProductInfos";
 import NavArticle from "./NavArticle";
+import Burger from "./Burger";
 
 const directionInit = {
   down: false,
@@ -106,12 +107,12 @@ const ProductCard = ({ match }) => {
           name="keywords"
           content="japan , product , candies , products , imported , kawai"
         />
-       <meta name="robots" content="index,follow" />
-       <meta name="author" content="un dos tres"></meta>
-       <meta name="url" content="http://www.ichinisan.com"></meta>
-       <meta name="coverage" content="Worldwide"></meta>
-       <meta name="publisher" content="WCS"></meta>
-       <link rel="canonical" href="https://www.ichinisan.com/" />
+        <meta name="robots" content="index,follow" />
+        <meta name="author" content="un dos tres"></meta>
+        <meta name="url" content="http://www.ichinisan.com"></meta>
+        <meta name="coverage" content="Worldwide"></meta>
+        <meta name="publisher" content="WCS"></meta>
+        <link rel="canonical" href="https://www.ichinisan.com/" />
       </Helmet>
       <div>
         <section
@@ -136,6 +137,7 @@ const ProductCard = ({ match }) => {
           />
 
           <Nav handleState={handleState} />
+          <Burger handleState={handleState} />
         </section>
 
         {state && <SlideCart handleState={handleState} />}
@@ -143,7 +145,6 @@ const ProductCard = ({ match }) => {
       <div>
         <footer
           className="downside"
-
           style={{
             background: `url("/${
               data[productIndex] && data[productIndex].background
