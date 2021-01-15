@@ -207,4 +207,36 @@ animation: slide 50s linear infinite;
   100% {opacity:1;}
   }
 
-  
+  @media screen and (max-width: 500px) {
+     .main-image {
+      width: 17em;
+      top: 65%;
+    }
+
+    .next-prev-container {
+      margin-right: -2.5em !important;
+      margin-top: -1em !important;
+    }
+
+    .title {
+      margin-left: -2.5em;
+      margin-top: 2.5em;
+    }
+
+    .product-card-container {
+      text-align: center;
+      height: 20em;
+    }
+
+    .upside {
+      height: 115vw !important;
+    }
+
+    .previous-image  {
+      width: 17em;
+    }
+
+    .next-image {
+      width: 17em;
+    }
+  }
