@@ -1,6 +1,6 @@
 .upside {
   display: flex;
-  justify-content:start;
+  justify-content:flex-start;
   transition: 0.4s;
   padding-top: 3vw;
 }
