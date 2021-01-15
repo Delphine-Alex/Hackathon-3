@@ -1,18 +1,16 @@
 .upside {
   display: flex;
-  justify-content:flex-start;
+  justify-content: flex-start;
   transition: 0.4s;
   padding-top: 3vw;
 }
-
-
 
 .title {
   transform: rotate(-90deg);
   display: flex;
   height: fit-content;
   padding-top: 7.8vw;
-  padding-right: 1em ;
+  padding-right: 1em;
   color: white;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -22,16 +20,11 @@
   color: black;
 }
 
-
-
-
 .product-card-container {
   display: flex;
   flex-direction: column;
   padding-top: 0.2vw;
 }
-
-
 
 .product-card-item {
   padding-bottom: 1em;
@@ -53,7 +46,7 @@
   color: white;
   font-size: 16px;
   width: 25vh;
-  height: 9vw;
+  height: 14vw;
   opacity: 80%;
   letter-spacing: 0.8px;
   line-height: 22px;
@@ -63,7 +56,6 @@
   color: white;
   font-size: 20px;
 }
-
 
 .main-image {
   position: absolute;
@@ -128,19 +120,22 @@
 }
 
 .downside {
-width: 100%;
-margin: 0;
-text-align: center;
-height: 50vh;
-padding-top: 120px;
-box-sizing: border-box; 
-animation: slide 50s linear infinite;
+  width: 100%;
+  margin: 0;
+  text-align: center;
+  height: 50vh;
+  padding-top: 120px;
+  box-sizing: border-box;
+  animation: slide 50s linear infinite;
 }
 
-
 @keyframes slide {
-  from { background-position: 0 0; }
-  to { background-position: 0 -400px; }
+  from {
+    background-position: 0 0;
+  }
+  to {
+    background-position: 0 -400px;
+  }
 }
 
 .fade-in-1 {
@@ -149,31 +144,52 @@ animation: slide 50s linear infinite;
   -moz-animation: fadeIn ease 0.4s;
   -o-animation: fadeIn ease 0.4s;
   -ms-animation: fadeIn ease 0.4s;
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
-  
-  @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
-  
-  @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
   }
-  
-  @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
+  100% {
+    opacity: 1;
   }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 
 .fade-in {
   animation: fadeIn ease 0.6s;
@@ -181,30 +197,109 @@ animation: slide 50s linear infinite;
   -moz-animation: fadeIn ease 0.6s;
   -o-animation: fadeIn ease 0.6s;
   -ms-animation: fadeIn ease 0.6s;
-  }
-  @keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
-  
-  @-moz-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
-  
-  @-webkit-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
-  
-  @-o-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
-  
-  @-ms-keyframes fadeIn {
-  0% {opacity:0;}
-  100% {opacity:1;}
-  }
+}
 
-  
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-moz-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-webkit-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-o-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@-ms-keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@media screen and (max-width: 1700px) {
+  .product-card-description {
+    height: 16vw;
+  }
+}
+
+@media screen and (max-width: 1100px) {
+  .product-card-description {
+    height: 15vw;
+  }
+}
+
+@media screen and (max-width: 800px) {
+  .product-card-description {
+    height: 15vw;
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .product-card-description {
+    height: 18vw;
+  }
+}
+
+@media screen and (max-width: 650px) {
+  .product-card-description {
+    height: 21vw;
+  }
+}
+
+@media screen and (max-width: 1500px) {
+  .title {
+    padding-top: 8.8vw;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .title {
+    padding-top: 10vw;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  .title {
+    padding-top: 13vw;
+  }
+}
+
+@media screen and (max-width: 950px) {
+  .title {
+    padding-top: 13vw;
+  }
+}
+
+@media screen and (max-width: 850px) {
+  .title {
+    padding-top: 15vw;
+  }
+}
