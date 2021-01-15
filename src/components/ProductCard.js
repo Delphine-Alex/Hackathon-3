@@ -96,6 +96,7 @@ const ProductCard = ({ match }) => {
        <meta name="url" content="http://www.ichinisan.com"></meta>
        <meta name="coverage" content="Worldwide"></meta>
        <meta name="publisher" content="WCS"></meta>
+       <link rel="canonical" href="https://www.ichinisan.com/" />
       </Helmet>
       <div>
         <section
