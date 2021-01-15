@@ -1,0 +1,52 @@
+.next-prev-container {
+  transform: rotate(90deg);
+  right: 0px;
+  display: flex;
+  writing-mode: vertical-lr;
+  flex-direction: column;
+  justify-content: flex-end;
+  position: fixed;
+  margin-top: 5%;
+  margin-right: 4%;
+}
+
+.next-prev-item {
+  padding-right: 10px;
+  border: none;
+  background: transparent;
+  text-transform: uppercase;
+  font-size: 1.5em;
+  font-weight: bolder;
+  letter-spacing: 3px;
+  padding-left: 0.5em;
+  cursor: pointer;
+}
+
+
+
+.next-prev-item:focus{
+  outline: 0;
+}
+
+.left-button {
+  transform: rotate(180deg);
+}
+
+.my-node-enter {
+  opacity: 0;
+}
+.my-node-enter-active {
+  opacity: 1;
+  transition: opacity 200ms;
+}
+.my-node-exit {
+  opacity: 1;
+}
+.my-node-exit-active {
+  opacity: 0;
+  transition: opacity 200ms;
+}
+
+
+
+

@@ -10,6 +10,7 @@ import "./ProductCard.css";
 import "./Shop/Shop.css";
 import ImageCenter from "./ImageCenter";
 import ProductInfos from "./ProductInfos";
+import NavArticle from "./NavArticle";
 
 const directionInit = {
   down: false,
@@ -22,6 +23,20 @@ const ProductCard = ({ match }) => {
   const [direction, setDirection] = useState(directionInit);
   const [mainDirection, setMainDirection] = useState("down");
   const { data } = useRequest("get", `/categories/${match.params.name}`);
+
+  const changeProduct = (e) => {
+    if (e.target.value === "prev") {
+      if (productIndex < data.length - 1) {
+        setDirection({ ...direction, down: true, center: true });
+        setMainDirection("down");
+      }
+    } else {
+      if (productIndex > 0) {
+        setDirection({ ...direction, up: true, center: true });
+        setMainDirection("up");
+      }
+    }
+  };
 
   const [state, setState] = useState(false);
   const handleState = () => {
@@ -74,7 +89,7 @@ const ProductCard = ({ match }) => {
             <h1 className='title'>Ichi Ni San</h1>
 
             <div className='product-card-container'>
-              <ProductInfos data={data} productIndex={productIndex} />
+              <ProductInfos data={data} productIndex={productIndex} className='fade-in'/>
               <AddToBox item={data[productIndex]} />
             </div>
 
@@ -97,12 +112,15 @@ const ProductCard = ({ match }) => {
       <div>
         <div
           className="downside"
+
           style={{
             background: `url("${
               data[productIndex] && data[productIndex].background
             }")`,
           }}
-        ></div>
+        >
+          <NavArticle changeProduct={changeProduct} />
+        </div>
       </div>
     </div>
   );

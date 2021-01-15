@@ -1,7 +1,9 @@
+import './ProductCard'
+
 const ProductInfos = ({ data, productIndex }) => {
   return (
     <div>
-      <h1 className="product-card-item product-card-title">
+      <h1 className="product-card-item product-card-title fade-in-1">
         {data[productIndex] && data[productIndex].name}
       </h1>
       <h2 className="product-card-item product-card-description">

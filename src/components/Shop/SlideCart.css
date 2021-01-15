@@ -2,10 +2,10 @@
   min-height: 100%;
   min-width: 22%;
   background: white;
-  
   position: absolute;
   top: 0;
   right: 0;
+  z-index: 1;
 }
 
 .slide-cart-container p {
